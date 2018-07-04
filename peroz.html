@@ -7,27 +7,51 @@
   <meta name="author" content="Peroz">
   <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,700" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css?v=1.0">
-
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
 </head>
 
-<body onload="myFunction()">
-  <!-- Introduction div -->
-  <div class="intro">
-    <div class="introContent">
-      <h1 class="titleIntro"></h1>
-      <p class="textIntro"></p>
-      <a class="button" href="#sub-container">See more</a>
-    </div>
+<body onload = "startTime()">
+  <svg id="svg" width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50%" cy="50%" r="10%" stroke="red" fill="transparent" stroke-width="5"/>
+  </svg>
+  <script>
+    
+    function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        var array = [20,22.5,25,27.5,30,32.5,35,37.5,40,42.5,45,47.5,50,52.5,55,57.5,60,62.5,65,67.5,70,72.5,75,77.5,80];
+        var r = 100+(s*1.8)
 
-  </div>
+        var minutes = m+20;
+        m = checkTime(m);
+        s = checkTime(s);
+         
+        
+        document.getElementById('svg').innerHTML = "<circle id='seconds' cx='50%' cy='50%' r='" + r +"' stroke='transparent ' fill='#f1f1f1' stroke-width='10'/> <line id='time' x1='" + (20+(h*2.5)) + "%' x2='" + minutes + "%' y1='20%' y2='80%'stroke='white' stroke-width='1'/>";
+        var t = setTimeout(startTime, 500);
+        console.log(minutes);
 
-	<div id ="container">
-		</div>
-  </div>
-  
+        for(i=0; i<array.length; i++){
+          document.getElementById('svg').innerHTML += "<circle id='hours' cx='"+array[i]+"%' cy='20%' r='0.2%' fill='white'/>";
+            }
+        for(i=0; i<60; i++){
+          document.getElementById('svg').innerHTML += "<line x1='"+(20+i)+"%' x2='"+(20+i)+"%' y1='80%' y2='79.5%' stroke='white'/>";
+        }
+    }
+    var ciccio = document.getElementById('svg');
+    console.log(ciccio);
+
+    
+
+    
+
+    function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+    }
+    
+    </script>
 
 </body>
 
