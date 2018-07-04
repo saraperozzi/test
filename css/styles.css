@@ -1,0 +1,122 @@
+
+body{}
+
+.intro{
+	min-height: 100%;
+	/*background-color: #88D18A; */
+	background: #a1ffce; /* fallback for old browsers */
+  	background: -webkit-linear-gradient(to right, #a1ffce, #faffd1); /* Chrome 10-25, Safari 5.1-6 */
+  	background: linear-gradient(to right, #a1ffce, #faffd1);
+}
+
+.container{
+	min-height: 100%;
+}
+
+.introContent{
+	position: absolute;
+	min-height: 50%;
+	width: 100%;
+	top:25%;
+}
+
+.titleIntro{
+	margin-left: 15%;
+	width: 60%;
+	font-family: Merriweather, serif;
+	font-weight: bolder;
+	font-size: 2em;
+	color: #98f0c1;
+}
+
+.textIntro{
+	margin-left: 15%;
+	width: 60%;
+	font-family: Merriweather, serif;
+	font-size: 1.5em;
+	color: #98f0c1;
+}
+
+.button{
+	position: inherit;
+	margin-top: 1%;
+	margin-left: 15%;
+	height: 50px;
+	width: 100px;
+	background-color: transparent;
+	border: 2px solid #98f0c1;
+	border-radius: 2px;
+	font-family: Merriweather, serif;
+	font-weight: bold;
+	color: #98f0c1;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 50px;
+	text-decoration: none;
+	
+}
+.button:hover{
+	background-color: #98f0c1;
+	color: transparent;
+	
+}
+
+#container{
+	background-color: #fff;
+	position: relative;
+	margin: 0% 10%;
+	overflow: auto;
+	/*text-align: center;*/
+	font-family: Merriweather, serif;
+}
+
+#container h1{
+	font-family: Merriweather, serif;
+	font-weight: bolder;
+	font-size: 3em; 	
+}
+
+#container p{
+	font-family: Merriweather, serif;
+	font-size: 1.3em;
+	line-height: 1.9em; 	
+}
+
+.emotion {
+	min-height: 100%;
+	position: relative;
+	margin: 10% 5%;	
+	display: block;
+	overflow: auto;
+	/*box-shadow: 5px	10px 20px	#F8F8F8;*/
+}
+
+.emotion:hover h1{
+	color: #ccc;
+	/*box-shadow: 5px	10px 20px	#F8F8F8;*/
+}
+
+.emotion:hover h1:before{
+	content:"/";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
