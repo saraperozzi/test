@@ -14,3 +14,10 @@ body{
 #time {
 	opacity: .8;
 }
+
+.text{
+  background-color: #2C3E50;
+  padding: 3% 3%;
+  opacity: .3;
+  font-family: sans-serif;
+}

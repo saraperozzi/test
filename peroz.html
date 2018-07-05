@@ -27,19 +27,27 @@
         s = checkTime(s);
          
         
-        document.getElementById('svg').innerHTML = "<circle id='seconds' cx='50%' cy='50%' r='" + r +"' stroke='transparent ' fill='#f1f1f1' stroke-width='10'/> <line id='time' x1='" + (20+(h*2.5)) + "%' x2='" + minutes + "%' y1='20%' y2='80%'stroke='white' stroke-width='1'/>";
+        document.getElementById('svg').innerHTML = "<circle id='seconds' cx='50%' cy='50%' r='" + r +"' stroke='transparent ' fill='#f1f1f1' stroke-width='10'/> <line id='time' x1='" + (17.5+(h*2.5)) + "%' x2='" + minutes + "%' y1='20%' y2='80%'stroke='white' stroke-width='1'/>";
         var t = setTimeout(startTime, 500);
         console.log(minutes);
 
         for(i=0; i<array.length; i++){
-          document.getElementById('svg').innerHTML += "<circle id='hours' cx='"+array[i]+"%' cy='20%' r='0.2%' fill='white'/>";
+          document.getElementById('svg').innerHTML += "<circle id='hours' cx='"+array[i]+"%' cy='20%' r='0.2%' fill='white'/> ";
+          if (h==(i+1)){
+            document.getElementById('svg').innerHTML += " <text class='text' x="+array[i]+"% y='18%' fill='white'>"+h+"</text> "
+          }
             }
-        for(i=0; i<60; i++){
+        for(i=0; i<61; i++){
           document.getElementById('svg').innerHTML += "<line x1='"+(20+i)+"%' x2='"+(20+i)+"%' y1='80%' y2='79.5%' stroke='white'/>";
+          if (m==(i+1)){
+            document.getElementById('svg').innerHTML += " <text class='text' x="+(19+i)+"% y='83%' fill='white'>"+m+"</text> "
+          }
         }
+        console.log(h)
     }
     var ciccio = document.getElementById('svg');
     console.log(ciccio);
+  
 
     
 
